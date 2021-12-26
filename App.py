@@ -1,5 +1,6 @@
 from flask import Flask,request,jsonify
-import random,datetime
+import random
+from datetime import datetime
 App=Flask(__name__)
 @App.route("/users",methods=["POST","GET"])
 def do():
@@ -14,15 +15,8 @@ def do():
      #"html page"
      id_genrator=random.randint(0,6535);
      Date_up=datetime.datetime.now()
-     html=f"""
-     <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv='content=text/html; charset=utf-8' />
-        <meta name='viewport' content='width=device-width,initial-scale=1.0'>
-        <title>Information Sender </title>
-        <style type='text/css' media='all'>
-        *{
+     css="""
+ *{
             margin: 0;
             padding: 0;
             outline: none;
@@ -53,6 +47,16 @@ def do():
                 color: #067996;
                 padding: 15px;
             }
+     """
+     html=f"""
+     <!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv='content=text/html; charset=utf-8' />
+        <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+        <title>Information Sender </title>
+        <style type='text/css' media='all'>
+       {css}
         </style>
     </head>
     <body>
