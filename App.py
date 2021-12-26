@@ -78,16 +78,16 @@ def do():
             </tr>
             <tr>
                 <td>
-                    1
+                    {id_genrator}
                 </td>
                 <td>
-                    201
+                    {Date_up}
                 </td>
                 <td>
-                    nebil
+                    {user}
                 </td>
                 <td>
-                    Hi 
+                    {msg}
                 </td>
             </tr>
             
