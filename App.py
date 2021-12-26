@@ -13,7 +13,7 @@ def do():
      f.close()
      #"html page"
      id_genrator=random.randint(0,6535);
-     Date_up=datetime.now()
+     Date_up=datetime.datetime.now()
      html=f"""
      <!DOCTYPE html>
 <html>
