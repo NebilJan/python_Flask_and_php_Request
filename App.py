@@ -1,14 +1,20 @@
 from flask import Flask,request,jsonify
+import random,datetime
 App=Flask(__name__)
 @App.route("/users",methods=["POST","GET"])
 def do():
+    #This ftunction Recv Data from from client
      data=request.form
      user=data["user"]
      msg=data["msg"]
+     #"Save log in the file format txt"
      f=open("log.txt","a")
      f.write(str(request.form))
      f.close()
-     html="""
+     #"html page"
+     id_genrator=random.randint(0,6535);
+     Date_up=datetime.now()
+     html=f"""
      <!DOCTYPE html>
 <html>
     <head>
@@ -93,7 +99,7 @@ def do():
      
      
      """
-     return f"Hi {user}  <br> thanx you msg: {msg}"
+     return f"{html}"
 if __name__ == "__main__":
     App.run("0.0.0.0",5000,debug=True)
 
