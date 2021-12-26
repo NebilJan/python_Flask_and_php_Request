@@ -7,23 +7,31 @@ Send Request
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-</head>
+
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 *{
 margin:0;
 padding:0;
 outline:none;
+font-family: 'Lobster', cursive;
 
 }
 body{
-background:dodgerblue;
+background:white;
 text-align:center;
 }
 form{
+    box-shadow: 0 0 80px rgba(0,0,0,0.10);
+    border:3px solid dodgerblue;
+    border-left-color: white;
+    border-top-color: white;
 width:95%;
 height:400px;
 background:white;
-margin:20px auto;
+margin:100px auto;
 }
 input{
 border:1px solid rgba(0,0,0,0.30);;
@@ -38,7 +46,7 @@ margin-top:18px;;
 padding-bottom:40px;
 }
 input::placeholder{
-color:green;
+color:rgba(0,0,0,0.50);
 }
 .btn{
 background:dodgerblue;
@@ -46,6 +54,7 @@ color:white;
 font-size:16px;
 }
 </style>
+</head>
 <body>
 <!--
 Flask app running log
