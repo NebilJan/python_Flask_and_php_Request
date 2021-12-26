@@ -47,7 +47,11 @@ font-size:16px;
 }
 </style>
 <body>
-<form action="http://172.27.235.190:5000/users"  method="POST">
+<!--
+Flask app running log
+You host the action 
+-->
+<form action="http://127.0.0.1/users"  method="POST">
 <br>
 <p>
 ■ Send Message ■</p>
