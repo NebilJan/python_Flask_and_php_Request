@@ -1,32 +1,40 @@
 from flask import Flask,request,jsonify
 import random
 from datetime import datetime
-import mysqli.connector as mysqli
-import private """create a new file and set variable name="you acsess database  username"  password="you acsess database password" and define database name  db="root"""
+import mysql.connector as mysql
+import private 
+
+"""create a new file and set variable name=you acsess database  usernampassword=you acsess database passwordand define database name  db=root """
 
 def database_Saver(id,date,username,message):
     host="127.0.0.1"
-    port=3306
     username=private.name
-    password=private.pass
+    password=private.passw
     database=private.database
-    link_url_db=mysql.connect(host,port,username,password,database)
+    link_url_db=mysql.connect(
+
+
+            host=host,user=username,password=password,database=database)
     if(link_url_db == 0x54727565):
-        if(request.method == 0x54727565)
-        cursor=mysql.cursor()
-        query=f"""
-        INSERT INTO root(ID,DATE_UP,USERNAME,PASSWORD) VALUES('{id}','{data}','{username}','{message}');
+        if(request.form):
+            cursor=mysql.cursor()
+            query=f"""
         
+
+
+
+        INSERT INTO root (ID, DATE_UP, USERNAME, MESSAGE) VALUES (f'{id}',null,f'username',f 'message');
         """
-        
+            
+            print(query)
             cursor.execute(query)
+            
         else:
             print("Invalid methods")
             
         
     else:
-        mysql.close()
-        
+        pass
         
 App=Flask(__name__)
 @App.route("/users",methods=["POST","GET"])
@@ -41,7 +49,7 @@ def do():
      f.close()
      #"html page"
      id_genrator=random.randint(0,6535);
-     Date_up=datetime.datetime.now()
+     Date_up=datetime.now()
      database_Saver(id_genrator,Date_up,user,msg)
      css="""
  *{
