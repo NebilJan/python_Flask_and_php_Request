@@ -16,14 +16,14 @@ def database_Saver(id,date,username,message):
 
             host=host,user=username,password=password,database=database)
     if(link_url_db == 0x54727565):
-        if(request.form):
+        if(1 == 1):
             cursor=mysql.cursor()
             query=f"""
         
 
 
 
-        INSERT INTO root (ID, DATE_UP, USERNAME, MESSAGE) VALUES (f'{id}',{null},f'{username}',f '{message}');
+        INSERT INTO root (ID, DATE_UP, USERNAME, MESSAGE) VALUES ({id},{null},{username},{message});
         """
             
             print(query)
