@@ -23,7 +23,7 @@ def database_Saver(id,date,username,message):
 
 
 
-        INSERT INTO root (ID, DATE_UP, USERNAME, MESSAGE) VALUES (f'{id}',null,f'username',f 'message');
+        INSERT INTO root (ID, DATE_UP, USERNAME, MESSAGE) VALUES (f'{id}',{null},f'{username}',f '{message}');
         """
             
             print(query)
